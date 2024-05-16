@@ -105,7 +105,7 @@ if __name__ == '__main__':
                     say(f"Opening {site[0]} for you Chief...")
                     webbrowser.open(site[1])
                     continue
-            songs=[["Kya tum Mujhse", r"C:\Users\RAHIL SENGUPTA\Downloads\old_Naajayaz - Kya Tum Mujhse.mp3"],["Bekhudi", r"C:\Users\RAHIL SENGUPTA\Downloads\Bekhudi Teraa Surroor 128 Kbps.mp3"]]
+            songs=[["Song_1", r"Song_1_path"],["Song_2", r"Song_2_path"]]
             for song in songs:
                 if f"Play {song[0]}".lower() in query.lower():
                     say(f"Playing {song[0]} for you Chief...")
@@ -115,7 +115,7 @@ if __name__ == '__main__':
                 srfTime = datetime.datetime.now().strftime("%H:%M:%S")
                 say(f"Chief The time is {srfTime}")
                 continue
-            applications=[["VS Code", r"D:\Microsoft VS Code\Code.exe"],["Opera GX", r"C:\Users\RAHIL SENGUPTA\AppData\Local\Programs\Opera GX\launcher.exe"],["Epic Games Launcher", r"C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe"],["Pie Chart",r"C:\Users\RAHIL SENGUPTA\PyCharm Community Edition 2024.1.1\bin\pycharm64.exe"]]
+            applications=[["app_1", r"app_1_path"],["app_2", r"app_2_path"],["app_3", r"app_3_path"],["app_4",r"app_4_path"]]
             for application in applications:
                 if f"Open {application[0]}".lower() in query.lower():
                     say(f"Opening {application[0]} for you Chief...")
