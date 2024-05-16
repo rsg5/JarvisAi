@@ -121,6 +121,36 @@ if __name__ == '__main__':
                     say(f"Opening {application[0]} for you Chief...")
                     os.startfile(application[1])
                     break
+
+            contacts=[["User_1","User_1_Phone_no."],["User_2","User_2_Phone_No."],["User_3","User_3_phone_no."],["User_4","User4_Phone_No."],["User_5","User_5_phone_no."],["User_6","User_6_Phone_no."]]
+            for contact in contacts:
+                if f"text {contact[0]}".lower() in query.lower():
+                    say(f"Sending message to {contact[0]}")
+                    try:
+                        pywhatkit.sendwhatmsg_instantly(contact[1],"Message",15, True, 10)
+                        print("Message was successfully sent. ")
+                    except Exception as e:
+                        print("Error in sending the message!")
+                    break
+            groups = [["grp_1", "grp_1_id"], ["grp_2","grp_2_id" ], ["grp_3","grp_3_id"]]
+            for group in groups:
+                if f"text {group[0]}".lower() in query.lower():
+                    say(f"Sending message to {group[0]}")
+                    try:
+                        pywhatkit.sendwhatmsg_to_group_instantly(group[1],"Message",15, True, 10)
+                        print("Message was successfully sent. ")
+                    except Exception as e:
+                        print("Error in sending the message!")
+                    break
+            mails = [["receiver_1", "receiver_1_email"], ["receiver_2", "receiver_2_email"]]
+            for mail in mails:
+                if f"email {mail[0]}".lower() in query.lower():
+                    say(f"Sending email to {mail[0]}")
+                    try:
+                        pywhatkit.send_mail("sender_email","password","Subject","Message",mail[1])
+                    except Exception as e:
+                        print("Error in sending the mail!")
+                    break
             fins=["bye","stop","end","finish"]
             for fin in fins:
                 if f"ok {fin}".lower() in query.lower():
