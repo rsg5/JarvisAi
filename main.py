@@ -9,7 +9,7 @@ import google
 import googlesearch
 import requests
 from bs4 import BeautifulSoup
-
+import pywhatkit
 
 
 
